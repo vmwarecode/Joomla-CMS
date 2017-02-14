@@ -1,0 +1,37 @@
+name: "auto-generated-pkg-1fce438a-0715-4dbf-9e81-daf3faff57d5"
+productVersion: "7.0.1-SNAPSHOT"
+data:
+- locator: "composite-blueprint/JoomlaCMS.yaml"
+  name: "Joomla CMS"
+  description: "Joomla CMS"
+  dependencies:
+  - "software-component/Software.PHPService.yaml"
+  - "software-component/Software.SystemConfiguration.yaml"
+  - "software-component/Software.ApacheServices.yaml"
+  - "software-component/Software.MySql.yaml"
+  - "software-component/Software.JoomlaServices.yaml"
+  - "software-component/Software.JoomlaDatabase.yaml"
+- locator: "software-component/Software.JoomlaDatabase.yaml"
+  name: "Joomla Database"
+  description: "Creates a Joomla DB User and PW, creates a Joomla DB on MySQL DB,\
+    \ and grants the user access to the DB."
+  dependencies:
+  - "software-component/Software.MySql.yaml"
+- locator: "software-component/Software.MySql.yaml"
+  name: "MySQL Database"
+  description: "MySQL installation and configuration."
+- locator: "software-component/Software.JoomlaServices.yaml"
+  name: "Joomla Service"
+  description: "Downloads and installs Joomla Open Source Content Management System.\
+    \ Must specify version! \nIE 3.6.5"
+  dependencies:
+  - "software-component/Software.ApacheServices.yaml"
+- locator: "software-component/Software.ApacheServices.yaml"
+  name: "Apache Services"
+  description: "Installs Apache web server, changes owner of /var/www/html to apache.apache,\
+    \ and starts the apache web service"
+- locator: "software-component/Software.SystemConfiguration.yaml"
+  name: "System Configuration"
+- locator: "software-component/Software.PHPService.yaml"
+  name: "PHP Service"
+exportTime: "2017-02-14T21:14:41.864Z"
