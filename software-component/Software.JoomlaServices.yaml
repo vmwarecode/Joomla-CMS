@@ -4,7 +4,7 @@ lastUpdated: "2017-02-14T20:58:27.302Z"
 id: "Software.JoomlaServices"
 name: "Joomla Service"
 description: "Downloads and installs Joomla Open Source Content Management System.\
-  \ Must specify version! \nIE 3.6.5-Stable\nor: 3.7.0-beta2-Beta"
+  \ Must specify version! \nIE 3.6.5"
 publishStatus: "PUBLISHED"
 publishStatusName: "Published"
 schema:
@@ -122,7 +122,7 @@ schema:
           type: "constant"
           value:
             type: "string"
-            value: "3.6.5-Stable"
+            value: "3.6.5"
     isMultiValued: false
   - id: "JOOMLA_DB_USER"
     label: "JOOMLA_DB_USER"
@@ -174,7 +174,7 @@ lifecycleTasks:
   lastUpdated: "2017-02-14T20:58:27.302Z"
   script:
     scriptContent: "#!/bin/bash\necho \"Downloading Joomla $JOOMLAVERSION \"\ncd /tmp\n\
-      /usr/bin/wget https://github.com/joomla/joomla-cms/releases/download/$JOOMLAVERSION/Joomla_$JOOMLAVERSION-Full_Package.zip\
+      /usr/bin/wget https://github.com/joomla/joomla-cms/releases/download/$JOOMLAVERSION/Joomla_$JOOMLAVERSION-Stable-Full_Package.zip\
       \ --output-document=/tmp/joomla.zip\n/usr/bin/unzip /tmp/joomla.zip -d /tmp/joomla\n\
       mv /tmp/joomla/* /var/www/html/"
     isRebootAfter: false
